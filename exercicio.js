@@ -1,4 +1,4 @@
-console.log("hello worlds")
+/*  console.log("hello worlds")
 
 let students = [];
 let pass = []
@@ -41,4 +41,37 @@ function passed() {
 
 loop()
 console.log("passed", pass )
-console.log(failed);
+console.log(failed); */
+
+let students = []
+let passed = []
+
+
+let nome = ['gian','arthur','jeff','anderson','luana','robin','allison','robert','clark'];
+
+
+
+
+function PushS() {
+    for (let i = 0; i < 9; i++) {
+        students.push({
+            nome: nome[i],
+            nota: Math.floor(Math.random() * 10),
+        })
+    }
+}
+
+
+function Passed() {
+        students.forEach(student => {
+    if (student.nota >= 6) {
+        passed.push(student)
+    }
+})
+}
+
+
+PushS()
+Passed()
+console.log(passed)
+
